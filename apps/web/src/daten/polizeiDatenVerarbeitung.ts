@@ -112,12 +112,17 @@ interface PolizeiCsvDaten {
     const praesidien = stationen.filter(s => s.typ === 'praesidium');
     
     praesidien.forEach(praesidium => {
-      // Alle Reviere für dieses Präsidium finden
+      // KORRIGIERT: Suche nach Revieren, deren parentId dem Präsidium-Kurznamen entspricht
+      // z.B. Präsidium "Polizeipräsidium Aalen" → parentId "Aalen"
+      const praesidiumKurzname = praesidium.name.replace('Polizeipräsidium ', '');
+      
       const reviere = stationen.filter(s => 
-        s.typ === 'revier' && s.parentId === praesidium.name
+        s.typ === 'revier' && s.parentId === praesidiumKurzname
       );
       
       hierarchie.set(praesidium.id, [praesidium, ...reviere]);
+      
+      console.log(`🏛️ ${praesidium.name} (${praesidiumKurzname}) → ${reviere.length} Reviere`);
     });
     
     return hierarchie;
