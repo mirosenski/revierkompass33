@@ -52,3 +52,6 @@ Thumbs.db
 
 # TanStack Router
 routeTree.gen.ts
+
+# npm lock files
+**/package-lock.json
