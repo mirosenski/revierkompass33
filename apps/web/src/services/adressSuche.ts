@@ -160,9 +160,7 @@ export async function searchAddress(query: string): Promise<GeocodeResult[]> {
         addressdetails: 1,
         limit: MAX_RESULTS,
       },
-      {
-        "User-Agent": "RevierKompass/1.0",
-      },
+      {},
     );
 
     // 3. Photon-Request (Fallback, ohne Rate Limiting)

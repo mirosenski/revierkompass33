@@ -31,105 +31,109 @@ export interface DetailedRouteResult {
 
 // Provider functions - defined locally to avoid import conflicts
 async function getRouteOSRM(start: Coordinates, end: Coordinates): Promise<DetailedRouteResult> {
-  const [startLng, startLat] = start;
-  const [endLng, endLat] = end;
-  
-  const coords = `${startLng},${startLat};${endLng},${endLat}`;
-  const url = `https://router.project-osrm.org/route/v1/driving/${coords}?overview=full&steps=true&geometries=geojson`;
-  
-  const response = await throttledFetch(url);
-  
-  if (!response.ok) {
-    throw new Error(`OSRM API error: ${response.status}`);
-  }
-  
-  const data = await response.json();
-  
-  if (!data || data.code !== 'Ok' || !data.routes || data.routes.length === 0) {
-    throw new Error(`OSRM routing failed: ${data?.code || 'No routes found'}`);
-  }
-  
-  const route = data.routes[0];
-  const steps = data.waypoints || [];
-  
-  return {
-    distance: route.distance,
-    duration: route.duration,
-    geometry: {
-      type: 'LineString',
-      coordinates: route.geometry.coordinates.map((coord: number[]) => [coord[0], coord[1]])
-    },
-    steps: steps.map((step: any, index: number) => ({
-      distance: step.distance || 0,
-      duration: step.duration || 0,
-      instruction: step.name || `Step ${index + 1}`,
-      maneuver: mapOSRMManeuverType(step.maneuver?.type || 'straight'),
-      location: [step.location[0], step.location[1]]
-    })),
-    provider: 'osrm',
-    confidence: 0.9,
-    cached: false,
-    responseTime: 0
-  };
+  return osrmLimiter.throttle(async () => {
+    const [startLng, startLat] = start;
+    const [endLng, endLat] = end;
+    
+    const coords = `${startLng},${startLat};${endLng},${endLat}`;
+    const url = `/api/osrm/route/v1/driving/${coords}?overview=full&steps=true&geometries=geojson`;
+    
+    const response = await throttledFetch(url);
+    
+    if (!response.ok) {
+      throw new Error(`OSRM API error: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    
+    if (!data || data.code !== 'Ok' || !data.routes || data.routes.length === 0) {
+      throw new Error(`OSRM routing failed: ${data?.code || 'No routes found'}`);
+    }
+    
+    const route = data.routes[0];
+    const steps = data.waypoints || [];
+    
+    return {
+      distance: route.distance,
+      duration: route.duration,
+      geometry: {
+        type: 'LineString',
+        coordinates: route.geometry.coordinates.map((coord: number[]) => [coord[0], coord[1]])
+      },
+      steps: steps.map((step: any, index: number) => ({
+        distance: step.distance || 0,
+        duration: step.duration || 0,
+        instruction: step.name || `Step ${index + 1}`,
+        maneuver: mapOSRMManeuverType(step.maneuver?.type || 'straight'),
+        location: [step.location[0], step.location[1]]
+      })),
+      provider: 'osrm',
+      confidence: 0.9,
+      cached: false,
+      responseTime: 0
+    };
+  });
 }
 
 async function getRouteValhalla(start: Coordinates, end: Coordinates): Promise<DetailedRouteResult> {
-  const [startLng, startLat] = start;
-  const [endLng, endLat] = end;
-  
-  const url = 'https://valhalla1.openstreetmap.de/route';
-  const body = {
-    locations: [
-      { lat: startLat, lon: startLng },
-      { lat: endLat, lon: endLng }
-    ],
-    costing: 'auto',
-    units: 'kilometers',
-    directions_options: {
-      units: 'kilometers'
+  return valhallaLimiter.throttle(async () => {
+    const [startLng, startLat] = start;
+    const [endLng, endLat] = end;
+    
+    const url = '/api/valhalla/route';
+    const body = {
+      locations: [
+        { lat: startLat, lon: startLng },
+        { lat: endLat, lon: endLng }
+      ],
+      costing: 'auto',
+      units: 'kilometers',
+      directions_options: {
+        units: 'kilometers'
+      }
+    };
+    
+    const response = await throttledFetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    });
+    
+    if (!response.ok) {
+      throw new Error(`Valhalla API error: ${response.status}`);
     }
-  };
-  
-  const response = await throttledFetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(body)
+    
+    const data = await response.json();
+    
+    if (!data || !data.trip || !data.trip.legs || data.trip.legs.length === 0) {
+      throw new Error('Valhalla routing failed: No route found');
+    }
+    
+    const leg = data.trip.legs[0];
+    const shape = decodePolyline(leg.shape);
+    
+    return {
+      distance: leg.summary.length * 1000, // Convert to meters
+      duration: leg.summary.time,
+      geometry: {
+        type: 'LineString',
+        coordinates: shape
+      },
+      steps: leg.maneuvers.map((maneuver: any) => ({
+        distance: maneuver.length * 1000,
+        duration: maneuver.time,
+        instruction: maneuver.instruction,
+        maneuver: mapValhallaManeuverType(maneuver.type),
+        location: [maneuver.raw_location[0], maneuver.raw_location[1]]
+      })),
+      provider: 'valhalla',
+      confidence: 0.8,
+      cached: false,
+      responseTime: 0
+    };
   });
-  
-  if (!response.ok) {
-    throw new Error(`Valhalla API error: ${response.status}`);
-  }
-  
-  const data = await response.json();
-  
-  if (!data || !data.trip || !data.trip.legs || data.trip.legs.length === 0) {
-    throw new Error('Valhalla routing failed: No route found');
-  }
-  
-  const leg = data.trip.legs[0];
-  const shape = decodePolyline(leg.shape);
-  
-  return {
-    distance: leg.summary.length * 1000, // Convert to meters
-    duration: leg.summary.time,
-    geometry: {
-      type: 'LineString',
-      coordinates: shape
-    },
-    steps: leg.maneuvers.map((maneuver: any) => ({
-      distance: maneuver.length * 1000,
-      duration: maneuver.time,
-      instruction: maneuver.instruction,
-      maneuver: mapValhallaManeuverType(maneuver.type),
-      location: [maneuver.raw_location[0], maneuver.raw_location[1]]
-    })),
-    provider: 'valhalla',
-    confidence: 0.8,
-    cached: false,
-    responseTime: 0
-  };
 }
 
 function getHaversineFallback(start: Coordinates, end: Coordinates): DetailedRouteResult {
@@ -171,7 +175,7 @@ class RateLimiter {
   private lastCall = 0;
   private readonly interval: number;
 
-  constructor(requestsPerSecond: number = 1) {
+  constructor(requestsPerSecond: number = 0.5) {
     this.interval = 1000 / requestsPerSecond;
   }
 
@@ -180,14 +184,18 @@ class RateLimiter {
     const timeSinceLastCall = now - this.lastCall;
     
     if (timeSinceLastCall < this.interval) {
-      const delay = this.interval - timeSinceLastCall;
-      await new Promise(resolve => setTimeout(resolve, delay));
+      const waitTime = this.interval - timeSinceLastCall;
+      await new Promise(resolve => setTimeout(resolve, waitTime));
     }
     
     this.lastCall = Date.now();
     return fn();
   }
 }
+
+// Create rate limiters for each provider
+const osrmLimiter = new RateLimiter(0.3); // 1 request every 3.3 seconds
+const valhallaLimiter = new RateLimiter(0.2); // 1 request every 5 seconds
 
 // Global rate limiter for all external API calls
 const apiRateLimiter = new RateLimiter(1); // 1 request per second
@@ -203,7 +211,6 @@ async function throttledFetch(url: string, options?: RequestInit): Promise<Respo
         ...options,
         signal: controller.signal,
         headers: {
-          'User-Agent': 'RevierKompass/1.0.0',
           ...options?.headers
         }
       });

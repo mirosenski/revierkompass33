@@ -30,10 +30,10 @@ class PerformanceMonitor {
 
   // Thresholds for alerts
   private readonly THRESHOLDS = {
-    CACHE_HIT_RATE_LOW: 50, // %
-    ERROR_RATE_HIGH: 10, // %
-    RESPONSE_TIME_SLOW: 5000, // ms
-    MEMORY_USAGE_HIGH: 100 * 1024 * 1024 // 100MB
+    CACHE_HIT_RATE_LOW: 30, // %
+    ERROR_RATE_HIGH: 20, // %
+    RESPONSE_TIME_SLOW: 10000, // ms
+    MEMORY_USAGE_HIGH: 200 * 1024 * 1024 // 200MB
   }
 
   constructor() {
@@ -91,17 +91,32 @@ class PerformanceMonitor {
 
   // Check performance thresholds and create alerts
   private checkThresholds(metrics: PerformanceMetrics) {
+    // Only check thresholds if we have enough data
+    if (metrics.requestCount < 5) {
+      return
+    }
+    
     this.checkCacheHitRate(metrics.cacheHitRate)
     this.checkMemoryUsage(metrics.memoryUsage)
   }
 
   private checkCacheHitRate(hitRate: number) {
+    // Only alert if we have enough requests to make cache hit rate meaningful
+    if (this.totalRequests < 10) {
+      return
+    }
+    
     if (hitRate < this.THRESHOLDS.CACHE_HIT_RATE_LOW) {
       this.createAlert('cache_low', `Cache hit rate is low: ${hitRate.toFixed(1)}%`, 'medium')
     }
   }
 
   private checkErrorRate() {
+    // Only alert if we have enough requests
+    if (this.totalRequests < 5) {
+      return
+    }
+    
     const errorRate = (this.errorCount / this.totalRequests) * 100
     if (errorRate > this.THRESHOLDS.ERROR_RATE_HIGH) {
       this.createAlert('error_high', `Error rate is high: ${errorRate.toFixed(1)}%`, 'high')
@@ -109,18 +124,31 @@ class PerformanceMonitor {
   }
 
   private checkResponseTime(responseTime: number) {
+    // Only alert for very slow responses (> 10 seconds)
     if (responseTime > this.THRESHOLDS.RESPONSE_TIME_SLOW) {
       this.createAlert('response_slow', `Slow response time: ${responseTime}ms`, 'medium')
     }
   }
 
   private checkMemoryUsage(memoryUsage: number) {
+    // Only alert if memory usage is very high (> 200MB)
     if (memoryUsage > this.THRESHOLDS.MEMORY_USAGE_HIGH) {
       this.createAlert('memory_high', `High memory usage: ${(memoryUsage / 1024 / 1024).toFixed(1)}MB`, 'high')
     }
   }
 
   private createAlert(type: PerformanceAlert['type'], message: string, severity: PerformanceAlert['severity']) {
+    // Check if we already have a recent alert of the same type
+    const fiveMinutesAgo = Date.now() - (5 * 60 * 1000)
+    const recentAlert = this.alerts.find(alert => 
+      alert.type === type && alert.timestamp > fiveMinutesAgo
+    )
+    
+    // Don't create duplicate alerts within 5 minutes
+    if (recentAlert) {
+      return
+    }
+
     const alert: PerformanceAlert = {
       id: crypto.randomUUID(),
       type,
@@ -131,11 +159,11 @@ class PerformanceMonitor {
 
     this.alerts.push(alert)
     
-    // Log critical alerts
-    if (severity === 'high') {
-      console.error('Performance Alert:', alert)
-    } else {
-      console.warn('Performance Alert:', alert)
+    // Only log high severity alerts in development, none in production
+    if (import.meta.env.MODE === 'development' && severity === 'high') {
+      console.warn('Critical Performance Alert:', alert.message)
+    } else if (severity === 'high') {
+      console.error('Critical Performance Alert:', alert.message)
     }
 
     // Keep only last 50 alerts
@@ -253,39 +281,39 @@ export const PRODUCTION_CONFIG = {
   // API endpoints for production
   endpoints: {
     osrm: {
-      primary: process.env.VITE_OSRM_ENDPOINT || 'https://router.project-osrm.org',
+      primary: import.meta.env.VITE_OSRM_ENDPOINT || 'https://router.project-osrm.org',
       fallbacks: [
         'https://routing.openstreetmap.de',
         'https://osrm-api.openstreetmap.de'
       ]
     },
     valhalla: {
-      primary: process.env.VITE_VALHALLA_ENDPOINT || 'https://valhalla1.openstreetmap.de',
+      primary: import.meta.env.VITE_VALHALLA_ENDPOINT || 'https://valhalla1.openstreetmap.de',
       fallbacks: []
     }
   },
 
   // Performance settings
   performance: {
-    cacheSize: parseInt(process.env.VITE_CACHE_SIZE || '100'),
-    cacheTtl: parseInt(process.env.VITE_CACHE_TTL || '900000'), // 15 minutes
-    requestTimeout: parseInt(process.env.VITE_REQUEST_TIMEOUT || '10000'), // 10 seconds
-    rateLimitPerSecond: parseFloat(process.env.VITE_RATE_LIMIT || '1')
+    cacheSize: parseInt(import.meta.env.VITE_CACHE_SIZE || '100'),
+    cacheTtl: parseInt(import.meta.env.VITE_CACHE_TTL || '900000'), // 15 minutes
+    requestTimeout: parseInt(import.meta.env.VITE_REQUEST_TIMEOUT || '10000'), // 10 seconds
+    rateLimitPerSecond: parseFloat(import.meta.env.VITE_RATE_LIMIT || '1')
   },
 
   // Monitoring settings
   monitoring: {
-    enabled: process.env.VITE_MONITORING_ENABLED === 'true',
-    alertWebhook: process.env.VITE_ALERT_WEBHOOK,
-    metricsEndpoint: process.env.VITE_METRICS_ENDPOINT
+    enabled: import.meta.env.VITE_MONITORING_ENABLED === 'true',
+    alertWebhook: import.meta.env.VITE_ALERT_WEBHOOK,
+    metricsEndpoint: import.meta.env.VITE_METRICS_ENDPOINT
   },
 
   // Feature flags
   features: {
-    enableValhalla: process.env.VITE_ENABLE_VALHALLA !== 'false',
-    enableOSRM: process.env.VITE_ENABLE_OSRM !== 'false',
-    enableFallback: process.env.VITE_ENABLE_FALLBACK !== 'false',
-    enableDebug: process.env.NODE_ENV === 'development' || process.env.VITE_DEBUG_ROUTING === 'true'
+    enableValhalla: import.meta.env.VITE_ENABLE_VALHALLA !== 'false',
+    enableOSRM: import.meta.env.VITE_ENABLE_OSRM !== 'false',
+    enableFallback: import.meta.env.VITE_ENABLE_FALLBACK !== 'false',
+    enableDebug: import.meta.env.MODE === 'development' || import.meta.env.VITE_DEBUG_ROUTING === 'true'
   }
 }
 

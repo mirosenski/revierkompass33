@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import { ErrorBoundary } from "react-error-boundary";
-import { getOptimalRoute, type LatLng, type RouteResult } from "@/services/routing";
+import { getOptimalRoute, type Coordinates } from "@/services/routing";
 import type { PolizeiStation } from "@/daten/polizeiDatenVerarbeitung";
 import { Link } from "@tanstack/react-router";
 
@@ -46,7 +46,7 @@ function Step3Component() {
   const { stations: stationsParam } = Route.useSearch();
   const [results, setResults] = useState<StationResult[]>([]);
   const [selectedStations, setSelectedStations] = useState<PolizeiStation[]>([]);
-  const [userLocation, setUserLocation] = useState<LatLng | null>(null);
+  const [userLocation, setUserLocation] = useState<Coordinates | null>(null);
 
   // Parse stations from URL params
   useEffect(() => {
@@ -68,40 +68,63 @@ function Step3Component() {
 
   // Get user location (mock for now - in real app would use geolocation)
   useEffect(() => {
-    setUserLocation({ lat: 48.7758, lng: 9.1829 }); // Stuttgart center
+    setUserLocation([9.1829, 48.7758]); // Stuttgart center [lng, lat]
   }, []);
 
   // Calculate routes for selected stations
   useEffect(() => {
     if (!userLocation || selectedStations.length === 0) return;
+    
     const calculateRoutes = async () => {
-      const newResults = await Promise.all(
-        selectedStations.map(async (station) => {
-          try {
-            const stationCoords: LatLng = {
-              lat: station.latitude!,
-              lng: station.longitude!
-            };
-            const route = await getOptimalRoute(userLocation, stationCoords);
-            return {
-              station: station.name,
-              distance: `${(route.distance / 1000).toFixed(1)} km`,
-              duration: `${Math.round(route.duration / 60)} min`,
-              loading: false,
-            };
-          } catch (error) {
-            return {
-              station: station.name,
-              distance: "",
-              duration: "",
-              loading: false,
-              error: error instanceof Error ? error.message : "Unbekannter Fehler",
-            };
-          }
-        })
-      );
-      setResults(newResults);
+      console.log(`🚀 Starte Routenberechnung für ${selectedStations.length} Stationen...`);
+      
+      const newResults = [];
+      
+      for (let i = 0; i < selectedStations.length; i++) {
+        const station = selectedStations[i];
+        console.log(`📍 Berechne Route ${i + 1}/${selectedStations.length}: ${station.name}`);
+        
+        try {
+          const stationCoords: Coordinates = [
+            station.longitude!, // lng
+            station.latitude!   // lat
+          ];
+          
+          const route = await getOptimalRoute(userLocation, stationCoords);
+          
+          newResults.push({
+            station: station.name,
+            distance: `${(route.distance / 1000).toFixed(1)} km`,
+            duration: `${Math.round(route.duration / 60)} min`,
+            loading: false,
+          });
+          
+          console.log(`✅ Route für ${station.name}: ${(route.distance / 1000).toFixed(1)} km, ${Math.round(route.duration / 60)} min`);
+          
+        } catch (error) {
+          console.warn(`❌ Fehler bei Route für ${station.name}:`, error);
+          
+          newResults.push({
+            station: station.name,
+            distance: "",
+            duration: "",
+            loading: false,
+            error: error instanceof Error ? error.message : "Unbekannter Fehler",
+          });
+        }
+        
+        // Update results after each calculation for better UX
+        setResults([...newResults]);
+        
+        // Small delay between requests to avoid overwhelming the APIs
+        if (i < selectedStations.length - 1) {
+          await new Promise(resolve => setTimeout(resolve, 1000));
+        }
+      }
+      
+      console.log(`🎉 Routenberechnung abgeschlossen!`);
     };
+    
     calculateRoutes();
   }, [userLocation, selectedStations]);
 
@@ -128,7 +151,7 @@ function Step3Component() {
     <div className="max-w-2xl mx-auto p-6">
       <h2 className="text-2xl font-bold mb-4">Schritt 3: Routenergebnisse</h2>
       <div className="mb-4 text-sm text-gray-600">
-        📍 Start: Stuttgart (48.7758, 9.1829) • 🎯 {selectedStations.length} Stationen ausgewählt
+        �� Start: Stuttgart (9.1829, 48.7758) • 🎯 {selectedStations.length} Stationen ausgewählt
       </div>
       <div className="space-y-4">
         {results.map((result, index) => (
