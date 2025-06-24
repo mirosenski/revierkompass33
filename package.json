@@ -8,6 +8,7 @@
     "lint:fix": "biome lint --max-diagnostics 0 --write",
     "format": "biome format --write",
     "check-types": "turbo run check-types",
+    "typecheck": "turbo run typecheck",
     "router:generate": "tanstack-router-cli generate",
     "router:watch": "tanstack-router-cli generate --watch"
   },

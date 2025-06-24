@@ -43,9 +43,12 @@ export function ThemeProvider({
 
   // Theme anwenden Funktion mit useCallback
   const applyEffectiveTheme = useCallback((newTheme: string) => {
-    const effectiveTheme = newTheme === "system" || newTheme === "auto" 
-      ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
-      : newTheme;
+    const effectiveTheme =
+      newTheme === "system" || newTheme === "auto"
+        ? window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light"
+        : newTheme;
 
     if (effectiveTheme === "dark") {
       document.documentElement.classList.add("dark");

@@ -8,6 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "check-types": "tsc --noEmit",
     "generate-routes": "pnpm dlx @tanstack/router-cli generate",
     "watch-routes": "pnpm dlx @tanstack/router-cli generate --watch"
   },

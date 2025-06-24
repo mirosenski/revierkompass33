@@ -123,9 +123,9 @@ async function cacheResults(query: string, results: GeocodeResult[]) {
 
 // Rate Limiting für Nominatim
 async function rateLimitedRequest(
-  url: string, 
-  params: Record<string, string | number>, 
-  headers: Record<string, string>
+  url: string,
+  params: Record<string, string | number>,
+  headers: Record<string, string>,
 ) {
   const now = Date.now();
   const timeSinceLastRequest = now - lastRequestTime;

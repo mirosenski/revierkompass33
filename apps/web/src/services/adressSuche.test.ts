@@ -153,8 +153,10 @@ export async function runAllTests() {
 // Test ausführen, wenn diese Datei direkt aufgerufen wird
 if (typeof window !== "undefined") {
   // Im Browser: Test-Funktionen global verfügbar machen
-  (window as unknown as Window & { testBWAddresses: typeof testBWAddresses }).testBWAddresses = testBWAddresses;
-  (window as unknown as Window & { testPerformance: typeof testPerformance }).testPerformance = testPerformance;
+  (window as unknown as Window & { testBWAddresses: typeof testBWAddresses }).testBWAddresses =
+    testBWAddresses;
+  (window as unknown as Window & { testPerformance: typeof testPerformance }).testPerformance =
+    testPerformance;
   (window as unknown as Window & { testDebounce: typeof testDebounce }).testDebounce = testDebounce;
   (window as unknown as Window & { runAllTests: typeof runAllTests }).runAllTests = runAllTests;
 
