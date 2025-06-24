@@ -13,7 +13,7 @@
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest --watch",
     "test:routing": "vitest run src/services/routing",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint .",
     "format": "biome format --write .",
     "type-check": "tsc --noEmit"
   },
@@ -55,6 +55,8 @@
     "@types/react-dom": "^19.1.6",
     "@typescript-eslint/eslint-plugin": "^6.19.0",
     "@typescript-eslint/parser": "^6.19.0",
+    "globals": "^16.2.0",
+    "typescript-eslint": "^8.35.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "@vitest/coverage-v8": "^1.2.0",
     "@vitest/ui": "^1.2.0",
