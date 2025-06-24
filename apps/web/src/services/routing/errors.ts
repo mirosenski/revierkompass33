@@ -24,4 +24,11 @@ export class CORSError extends Error {
     super(`CORS error for ${provider} - use proxy or fallback`);
     this.name = 'CORSError';
   }
+}
+
+export class InvalidCoordinateError extends Error {
+  constructor(message: string = 'Invalid coordinates provided') {
+    super(message);
+    this.name = 'InvalidCoordinateError';
+  }
 } 

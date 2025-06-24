@@ -1,6 +1,6 @@
 import { typedFetch } from '@/services/http/fetch';
 import { validateCoordinates } from '@/utils/validation';
-import { RateLimitError, CORSError } from '../errors';
+import { RateLimitError, CORSError, InvalidCoordinateError } from '../errors';
 import type { LatLng, RouteResult } from './osrm';
 
 interface ValhallaResponse {
@@ -34,7 +34,7 @@ interface ValhallaRequest {
 export async function getRouteValhalla(origin: LatLng, dest: LatLng): Promise<RouteResult> {
   // Validate coordinates
   if (!validateCoordinates(origin.lat, origin.lng) || !validateCoordinates(dest.lat, dest.lng)) {
-    throw new Error('Invalid coordinates provided');
+    throw new InvalidCoordinateError();
   }
 
   const url = 'https://valhalla1.openstreetmap.de/route';

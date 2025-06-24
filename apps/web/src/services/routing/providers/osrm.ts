@@ -1,6 +1,6 @@
 import { typedFetch } from '@/services/http/fetch';
 import { validateCoordinates } from '@/utils/validation';
-import { RateLimitError, CORSError } from '../errors';
+import { RateLimitError, CORSError, InvalidCoordinateError } from '../errors';
 
 export interface LatLng {
   lat: number;
@@ -49,7 +49,7 @@ function throttleOSRM(): Promise<void> {
 export async function getRouteOSRM(origin: LatLng, dest: LatLng): Promise<RouteResult> {
   // Validate coordinates
   if (!validateCoordinates(origin.lat, origin.lng) || !validateCoordinates(dest.lat, dest.lng)) {
-    throw new Error('Invalid coordinates provided');
+    throw new InvalidCoordinateError();
   }
 
   // KORRIGIERTE URL-FORMATIERUNG

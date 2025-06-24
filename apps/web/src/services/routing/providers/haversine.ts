@@ -1,10 +1,11 @@
 import { validateCoordinates } from '@/utils/validation';
+import { InvalidCoordinateError } from '../errors';
 import type { LatLng, RouteResult } from './osrm';
 
 export async function getHaversineFallback(origin: LatLng, dest: LatLng): Promise<RouteResult> {
   // Validate coordinates
   if (!validateCoordinates(origin.lat, origin.lng) || !validateCoordinates(dest.lat, dest.lng)) {
-    throw new Error('Invalid coordinates provided');
+    throw new InvalidCoordinateError();
   }
 
   const distance = calculateHaversineDistance(origin, dest);
