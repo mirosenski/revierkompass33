@@ -1,17 +1,19 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute } from "@tanstack/react-router";
+import { useId } from "react";
 
-export const Route = createFileRoute('/login')({
+export const Route = createFileRoute("/login")({
   component: Login,
-})
+});
 
-function Login() {
+export default function Login() {
+  const emailId = useId();
+  const passwordId = useId();
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12 px-4">
       <div className="max-w-md mx-auto">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-            Anmelden
-          </h1>
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">Anmelden</h1>
           <p className="text-gray-600 dark:text-gray-400">
             Melden Sie sich in Ihrem RevierKompass-Konto an.
           </p>
@@ -20,24 +22,30 @@ function Login() {
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
           <form className="space-y-6">
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label
+                htmlFor={emailId}
+                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+              >
                 E-Mail
               </label>
               <input
                 type="email"
-                id="email"
+                id={emailId}
                 className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                 placeholder="ihre@email.de"
               />
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label
+                htmlFor={passwordId}
+                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+              >
                 Passwort
               </label>
               <input
                 type="password"
-                id="password"
+                id={passwordId}
                 className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                 placeholder="••••••••"
               />
@@ -53,8 +61,8 @@ function Login() {
 
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              Noch kein Konto?{' '}
-              <a href="#" className="text-blue-600 dark:text-blue-400 hover:underline">
+              Noch kein Konto?{" "}
+              <a href="/register" className="text-blue-600 dark:text-blue-400 hover:underline">
                 Registrieren
               </a>
             </p>
@@ -62,5 +70,5 @@ function Login() {
         </div>
       </div>
     </div>
-  )
-} 
+  );
+}

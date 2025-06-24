@@ -1,16 +1,16 @@
-import { createRootRoute, Outlet, useLocation } from '@tanstack/react-router'
-import { TanStackRouterDevtools } from '@tanstack/router-devtools'
-import { Header, Footer, Breadcrumb, BackToTop } from '../components/layout'
+import { createRootRoute, Outlet, useLocation } from "@tanstack/react-router";
+import { TanStackRouterDevtools } from "@tanstack/router-devtools";
+import { BackToTop, Breadcrumb, Footer, Header } from "../components/layout";
 
 export const Route = createRootRoute({
   component: RootComponent,
-})
+});
 
 function RootComponent() {
-  const location = useLocation()
-  
+  const location = useLocation();
+
   // Breadcrumb auf allen Seiten außer der Home-Seite anzeigen
-  const showBreadcrumb = location.pathname !== '/'
+  const showBreadcrumb = location.pathname !== "/";
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -23,5 +23,5 @@ function RootComponent() {
       <BackToTop />
       <TanStackRouterDevtools />
     </div>
-  )
-} 
+  );
+}

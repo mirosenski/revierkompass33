@@ -12,8 +12,8 @@ export function Footer() {
               <span className="text-xl font-bold">RevierKompass</span>
             </div>
             <p className="text-gray-400 dark:text-gray-500 max-w-md">
-              Ihre zuverlässige Anwendung für die optimale Routenplanung 
-              zu Polizeistationen in Baden-Württemberg.
+              Ihre zuverlässige Anwendung für die optimale Routenplanung zu Polizeistationen in
+              Baden-Württemberg.
             </p>
           </div>
 
@@ -21,9 +21,24 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="/" className="text-gray-400 dark:text-gray-500 hover:text-white">Home</a></li>
-              <li><a href="/wizard/step1" className="text-gray-400 dark:text-gray-500 hover:text-white">Route planen</a></li>
-              <li><a href="/about" className="text-gray-400 dark:text-gray-500 hover:text-white">Über uns</a></li>
+              <li>
+                <a href="/" className="text-gray-400 dark:text-gray-500 hover:text-white">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/wizard/step1"
+                  className="text-gray-400 dark:text-gray-500 hover:text-white"
+                >
+                  Route planen
+                </a>
+              </li>
+              <li>
+                <a href="/about" className="text-gray-400 dark:text-gray-500 hover:text-white">
+                  Über uns
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -33,7 +48,14 @@ export function Footer() {
             <ul className="space-y-2">
               <li className="text-gray-400 dark:text-gray-500">Baden-Württemberg</li>
               <li className="text-gray-400 dark:text-gray-500">Deutschland</li>
-              <li><a href="mailto:info@revierkompass.de" className="text-gray-400 dark:text-gray-500 hover:text-white">info@revierkompass.de</a></li>
+              <li>
+                <a
+                  href="mailto:info@revierkompass.de"
+                  className="text-gray-400 dark:text-gray-500 hover:text-white"
+                >
+                  info@revierkompass.de
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -45,5 +67,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
-} 
+  );
+}

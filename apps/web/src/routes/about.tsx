@@ -1,8 +1,8 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute } from "@tanstack/react-router";
 
-export const Route = createFileRoute('/about')({
+export const Route = createFileRoute("/about")({
   component: About,
-})
+});
 
 function About() {
   return (
@@ -22,27 +22,25 @@ function About() {
             Was ist RevierKompass?
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-6">
-            RevierKompass ist eine moderne Webanwendung, die Ihnen dabei hilft, 
-            schnell und einfach den optimalen Weg zu Polizeistationen in Baden-Württemberg zu finden.
+            RevierKompass ist eine moderne Webanwendung, die Ihnen dabei hilft, schnell und einfach
+            den optimalen Weg zu Polizeistationen in Baden-Württemberg zu finden.
           </p>
-          
+
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
             Unsere Mission
           </h3>
           <p className="text-gray-600 dark:text-gray-400 mb-6">
-            Wir möchten die Navigation zu wichtigen Einrichtungen so einfach und 
-            benutzerfreundlich wie möglich gestalten.
+            Wir möchten die Navigation zu wichtigen Einrichtungen so einfach und benutzerfreundlich
+            wie möglich gestalten.
           </p>
 
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-            Technologie
-          </h3>
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Technologie</h3>
           <p className="text-gray-600 dark:text-gray-400">
-            Entwickelt mit modernsten Webtechnologien wie React, TypeScript und Tailwind CSS 
-            für eine optimale Benutzererfahrung.
+            Entwickelt mit modernsten Webtechnologien wie React, TypeScript und Tailwind CSS für
+            eine optimale Benutzererfahrung.
           </p>
         </div>
       </div>
     </div>
-  )
-} 
+  );
+}

@@ -1,7 +1,7 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
-import { VitePWA } from 'vite-plugin-pwa'
+import tailwindcss from "@tailwindcss/vite";
+import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
+import { VitePWA } from "vite-plugin-pwa";
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -9,18 +9,19 @@ export default defineConfig({
     react(),
     tailwindcss(),
     VitePWA({
-      strategies: 'injectManifest',
+      strategies: "injectManifest",
       injectManifest: {
-        globPatterns: ['**/*.{js,css,html,svg,png,ico}'],
+        globPatterns: ["**/*.{js,css,html,svg,png,ico}"],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,svg,png,ico}'],
+        globPatterns: ["**/*.{js,css,html,svg,png,ico}"],
       },
-    })
+    }),
   ],
   resolve: {
     alias: {
-      '@': '/src',
+      "@": "/src",
     },
   },
-})
+  assetsInclude: ["**/*.csv"],
+});

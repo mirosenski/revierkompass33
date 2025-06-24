@@ -1,0 +1,266 @@
+sl_store,sl_address,sl_city,sl_zip,sl_latitude,sl_longitude,sl_tags,sl_phone,Polizeipräsidium
+Landeskriminalamt Baden-Württemberg,Taubenheimstraße 85,Stuttgart,70372,48.800494,9.233579,,0711 5401-0,LKA
+Polizeipräsidium Aalen,Böhmerwaldstraße 20,Aalen,73431,48.830248,10.09198,Polizeipräsidium,07361 580-0,Aalen
+Direktion Polizeireviere Aalen,Böhmerwaldstraße 20,Aalen,73431,48.8306236,10.0918036,Direktion,07361 580-0,Aalen
+Polizeirevier Aalen,Stuttgarter Straße 5,Aalen,73430,48.83774,10.09566,Polizeirevier,07361 524-0,Aalen
+Polizeirevier Backnang,Aspacher Straße 75,Backnang,71522,48.949263,9.421463,Polizeirevier,07191 909-0,Aalen
+Polizeirevier Crailsheim,Parkstraße 7,Crailsheim,74564,49.135451,10.074459,Polizeirevier,07951 480-0,Aalen
+Polizeirevier Ellwangen,Karlstraße 3,Ellwangen (Jagst),73479,48.964228,10.131518,Polizeirevier,07961 930-0,Aalen
+Polizeirevier Fellbach,Cannstatter Straße 16,Fellbach,70734,48.807339,9.277376,Polizeirevier,0711 5772-0,Aalen
+Polizeirevier Schorndorf,Grabenstraße 28/1,Schorndorf,73614,48.80715,9.52375,Polizeirevier,07181 204-0,Aalen
+Polizeirevier Schwäbisch Gmünd,Lessingstraße 7,Schwäbisch Gmünd,73525,48.796051,9.791286,Polizeirevier,07171 358-0,Aalen
+Polizeirevier Schwäbisch Hall,Salinenstraße 18,Schwäbisch Hall,74523,49.1181768,9.7341306,Polizeirevier,0791 400-0,Aalen
+Polizeirevier Waiblingen,Alter Postplatz 20,Waiblingen,71332,48.82902,9.31758,Polizeirevier,07151 950-0,Aalen
+Polizeirevier Winnenden,Eugenstraße 5,Winnenden,71364,48.87295,9.40646,Polizeirevier,07195 694-0,Aalen
+Kriminalpolizeidirektion Waiblingen,Alter Postplatz 20,Waiblingen,71332,48.82902,9.31758,Direktion,07151 950-0,Aalen
+Kriminaldauerdienst Waiblingen,Lessingstraße 7,Schwäbisch Gmünd,73525,48.796032,9.791238,,07171 358-0,Aalen
+Kriminalkommissariat Aalen,Böhmerwaldstraße 20,Aalen,73431,48.830624,10.091804,,07361 580-0,Aalen
+Kriminalkommissariat Schwäbisch Hall,Salinenstraße 18,Schwäbisch Hall,74523,49.1181768,9.7341306,,0791 400-0,Aalen
+Verkehrspolizeiinspektion Kirchberg/Jagst,Ortsstraße 1,Kirchberg,74592,49.173102,9.959491,Direktion,07904 9426-0,Aalen
+Verkehrsdienst-Außenstelle Aalen,Böhmerwaldstraße 20,Aalen,73431,48.830624,10.091804,,07361 580-0,Aalen
+Verkehrsdienst-Außenstelle Backnang,Eugen-Adolff-Straße  122,Backnang,71522,48.946623,9.444998,,07191 8929-90,Aalen
+Polizeipräsidium Einsatz,Heininger Straße 100,Göppingen,73037,48.6895433,9.6719037,Polizeipräsidium,07161 616-0,Einsatz
+Polizeipräsidium Freiburg,Bissierstraße 1,Freiburg im Breisgau,79114,48.00235,7.82138,Polizeipräsidium,0761 882-0,Freiburg
+Direktion Polizeireviere Freiburg,Bissierstraße 1,Freiburg im Breisgau,79114,48.00235,7.82138,Direktion,0761 882-0,Freiburg
+Polizeirevier Bad Säckingen,Rathausplatz 3,Bad Säckingen,79713,47.5523597,7.949340597,Polizeirevier,07761 934-0,Freiburg
+Polizeirevier Breisach,Müllheimerstraße 1,Breisach am Rhein,79206,48.0382143,7.5803855,Polizeirevier,07667 9117-0,Freiburg
+Polizeirevier Emmendingen,Wiesenstraße 4,Emmendingen,79312,48.10852,7.85372,Polizeirevier,07641 582-0,Freiburg
+Polizeirevier Freiburg -Nord-,Bertoldstraße 43a,Freiburg im Breisgau,79098,47.996218,7.8454321,Polizeirevier,0761 882-4221,Freiburg
+Polizeirevier Freiburg -Süd-,Heinrich-von-Stephan-Straße 4,Freiburg im Breisgau,79100,47.98763,7.8364,Polizeirevier,0761 882-0,Freiburg
+Polizeirevier Lörrach,Weinbrennerstraße 8,Lörrach,79539,47.61014,7.65873,Polizeirevier,07621 176-0,Freiburg
+Polizeirevier Müllheim,Schwarzwaldstraße 14-16,Müllheim,79379,47.81185,7.62641,Polizeirevier,07631 1788-0,Freiburg
+Polizeirevier Rheinfelden (Baden),Basler Straße 16,Rheinfelden (Baden),79618,47.55532,7.7831054,Polizeirevier,07623 7404-0,Freiburg
+Polizeirevier Schopfheim,Hebelstraße 18,Schopfheim,79650,47.6478483,7.8244383,Polizeirevier,07622 66698-0,Freiburg
+Polizeirevier Titisee-Neustadt,Bei der Kirche 2,Titisee-Neustadt,79822,47.91138,8.21507,Polizeirevier,07651 9336-0,Freiburg
+Polizeirevier Waldkirch,Marktplatz 19,Waldkirch,79183,48.0930829,7.9619985,Polizeirevier,07681 4074-0,Freiburg
+Polizeirevier Waldshut-Tiengen,Poststraße 4,Waldshut-Tiengen,79761,47.62217,8.21728,Polizeirevier,07751 8316-0,Freiburg
+Polizeirevier Weil am Rhein,Basler Straße 7,Weil am Rhein,79576,47.59161,7.61,Polizeirevier,07621 9797-0,Freiburg
+Kriminalpolizeidirektion Freiburg,Heinrich-von-Stephan-Straße 4,Freiburg im Breisgau,79100,47.98763,7.8364,Direktion,0761 882-0,Freiburg
+Kriminaldauerdienst Freiburg,Heinrich-von-Stephan-Straße 4,Freiburg im Breisgau,79100,47.98763,7.8364,,0761 882-0,Freiburg
+Kriminalkommissariat Emmendingen,Wiesenstraße 4,Emmendingen,79312,48.10852,7.85372,,07641 582-200,Freiburg
+Kriminalkommissariat Lörrach,Weinbrennerstraße 6,Lörrach,79539,47.61055,7.65887,,07621 176-0,Freiburg
+Kriminalkommissariat Waldshut-Tiengen,Ostpreußenstraße 22,Waldshut-Tiengen,79761,47.63306,8.27873,,07741 8316-0,Freiburg
+Verkehrspolizeiinspektion Freiburg,Bissierstraße 1,Freiburg im Breisgau,79114,48.00235,7.82138,Direktion,0761 882-3100,Freiburg
+Verkehrsdienst-Außenstelle Waldshut-Tiengen,Alfred-Nobel-Straße 18,Waldshut-Tiengen,79761,47.614838,8.24108,,07751 8963-0,Freiburg
+Verkehrsdienst Weil am Rhein,Alte Straße 15,Weil am Rhein,79576,47.592136,7.603116,,07621 9800-0,Freiburg
+Polizeipräsidium Heilbronn,Karlstraße 108-112,Heilbronn,74076,49.14155,9.23619,Polizeipräsidium,07131-104-0,Heilbronn
+Schutzpolizeidirektion Heilbronn,Karlstraße 108-112,Heilbronn,74076,49.14155,9.23619,Direktion,07131-104-0,Heilbronn
+Polizeirevier Bad Mergentheim,Schloß 6,Bad Mergentheim,97980,49.49275,9.77691,Polizeirevier,07931 5499-0,Heilbronn
+Polizeirevier Buchen,Bödigheimer Straße 19,Buchen (Odenwald),74722,49.51619,9.323873,Polizeirevier,06281 904-0,Heilbronn
+Polizeirevier Eppingen,Brettener Straße 57,Eppingen,75031,49.135654,8.90641,Polizeirevier,07262 6095-0,Heilbronn
+Polizeirevier Heilbronn,John-F.-Kennedy-Straße 14,Heilbronn,74074,49.123493,9.22135,Polizeirevier,07131 7479-0,Heilbronn
+Polizeirevier Heilbronn-Böckingen,Neckargartacher Straße 108,Heilbronn,74080,49.149374,9.196707,Polizeirevier,07131 20406-0,Heilbronn
+Polizeirevier Künzelsau,Schillerstraße 11,Künzelsau,74653,49.27948,9.68212,Polizeirevier,07940 940-0,Heilbronn
+Polizeirevier Lauffen,Stuttgarter Straße 19,Lauffen am Neckar,74348,49.07395,9.15531,Polizeirevier,07133 209-0,Heilbronn
+Polizeirevier Mosbach,Hauptstraße 85,Mosbach,74821,49.356241,9.148287,Polizeirevier,06261 809-0,Heilbronn
+Polizeirevier Neckarsulm,Binswanger Straße 1,Neckarsulm,74172,49.190376,9.224797,Polizeirevier,07132 9371-0,Heilbronn
+Polizeirevier Öhringen,Karlsvorstadt 29,Öhringen,74613,49.2012387,9.5073549,Polizeirevier,07941 930-0,Heilbronn
+Polizeirevier Tauberbischofsheim,Hauptstraße 91,Tauberbischofsheim,97941,49.62028,9.65909,Polizeirevier,09341 81-0,Heilbronn
+Polizeirevier Weinsberg,Haller Straße 17,Weinsberg,74189,49.15194,9.29223,Polizeirevier,07134  992-0,Heilbronn
+Polizeirevier Wertheim,Wilhelm-Blos-Straße 1,Wertheim,97877,49.75719,9.51547,Polizeirevier,09342 91 89-0,Heilbronn
+Kriminalpolizeidirektion Heilbronn,Karlstraße 108-112,Heilbronn,74076,49.14155,9.236196,Direktion,07131 104-0,Heilbronn
+Kriminaldauerdienst Heilbronn,Bahnhofstraße 35,Heilbronn,74072,49.1421,9.207838,,07131 104-4444,Heilbronn
+Kriminalkommissariat Künzelsau,Schillerstraße 7 - 11,Künzelsau,74653,49.278929,9.683158,,07940 940-0,Heilbronn
+Kriminalkommissariat Mosbach,Hauptstraße 81-83,Mosbach,74821,49.355683,9.147944,,06261 809-0,Heilbronn
+Kriminalkommissariat Tauberbischofsheim,Hauptstraße 91,Tauberbischofsheim,97941,49.62028,9.65909,,09341 81-0,Heilbronn
+Verkehrspolizeiinspektion Weinsberg,Im Eisenhut 1,Weinsberg,74189,49.13518,9.30219,Direktion,07134 513-0,Heilbronn
+Verkehrsdienst Tauberbischofsheim,Am Eichelberg 1,Tauberbischofsheim,97941,49.60189,9.69085,,09341 6004-0,Heilbronn
+Polizeipräsidium Karlsruhe,Durlacher Allee 31-33,Karlsruhe,76131,49.0075455,8.4258926,Polizeipräsidium,0721 666-0,Karlsruhe
+Schutzpolizeidirektion Karlsruhe,Durlacher Allee 31-33,Karlsruhe,76131,49.007545,8.425893,Direktion,0721 666-0,Karlsruhe
+Polizeirevier Bad Schönborn,Hauptstraße 11,Bad Schönborn,76669,49.2062279,8.6486305,Polizeirevier,07253 8026-0,Karlsruhe
+Polizeirevier Bretten,Weißhofer Straße 47,Bretten,75015,49.0358073,8.7117024,Polizeirevier,07252 5046-0,Karlsruhe
+Polizeirevier Bruchsal,Schönbornstraße 12-14,Bruchsal,76646,49.1278202,8.5994215,Polizeirevier,07251 726-0,Karlsruhe
+Polizeirevier Calw,Schloßberg 3,Calw,75365,48.717534,8.7350119,Polizeirevier,07051 161-3511,Karlsruhe
+Polizeirevier Ettlingen,Pforzheimer Straße 18,Ettlingen,76275,48.9421391,8.411131,Polizeirevier,07243 3200-0,Karlsruhe
+Polizeirevier Karlsruhe-Durlach,Amthausstraße 11 - 13,Karlsruhe,76227,48.9983685,8.4715934,Polizeirevier,0721 4907-0,Karlsruhe
+Polizeirevier Karlsruhe-Marktplatz,Karl-Friedrich-Straße 15,Karlsruhe,76133,49.007832,8.4040002,Polizeirevier,0721 666-3311,Karlsruhe
+Polizeirevier Karlsruhe-Südweststadt,Beiertheimer Allee 16,Karlsruhe,76137,49.0020225,8.3977478,Polizeirevier,0721 666-3411,Karlsruhe
+Polizeirevier Karlsruhe-Waldstadt,Stettiner Straße 41,Karlsruhe,76139,49.0323462,8.4318192,Polizeirevier,0721 96718-0,Karlsruhe
+Polizeirevier Karlsruhe-West,Moltkestraße 68,Karlsruhe,76133,49.0151313,8.3757148,Polizeirevier,0721 666-3611,Karlsruhe
+Polizeirevier Mühlacker,Hindenburgstraße 100,Mühlacker,75417,48.95231,8.84832,Polizeirevier,07041 9693-0,Pforzheim
+Polizeirevier Nagold,Oberamteistraße 6,Nagold,72202,48.552021,8.722196,Polizeirevier,07452 9305-0,Pforzheim
+Polizeirevier Neuenbürg,Bahnhofstraße 12,Neuenbürg,75305,48.84722,8.58889,Polizeirevier,07082 7912-311,Pforzheim
+Polizeirevier Pforzheim-Nord,Bahnhofstraße 13,Pforzheim,75172,48.893107,8.700933,Polizeirevier,07231 186-3211,Pforzheim
+Polizeirevier Pforzheim-Süd,Schwebelstraße 10,Pforzheim,75172,48.891099,8.684557,Polizeirevier,07231 186-3311,Pforzheim
+Polizeirevier Philippsburg,Lessingstraße 10,Philippsburg,76661,49.2381635,8.4617278,Polizeirevier,07256 9329-0,Karlsruhe
+Kriminalpolizeidirektion Karlsruhe,Hertzstraße 8/10a,Karlsruhe,76185,49.019888,8.365544,Direktion,0721 666-5001,Karlsruhe
+Kriminaldauerdienst Karlsruhe,Moltkestraße 62,Karlsruhe,76133,49.0152978,8.3784167,,0721 666-5555,Karlsruhe
+Kriminalkommissariat Bruchsal,Schloßstraße 23,Bruchsal,76646,49.127077,8.596677,,07251 726-202,Karlsruhe
+Kriminalpolizeidirektion Calw,Hirsauer Wiesenweg 10,Calw,75365,48.721682,8.735944,,07051 161-4001,Pforzheim
+Kriminalkommissariat Pforzheim,Ostendstraße 3,Pforzheim,75175,48.893225,8.715791,,07231 186-4901,Pforzheim
+Verkehrspolizeiinspektion Karlsruhe,Durlacher Allee 31-33,Karlsruhe,76131,49.007545,8.425893,Direktion,0721 666-4105,Karlsruhe
+Verkehrsdienst Karlsruhe - Verkehrsgruppe Bundesautobahn,Alte Karlsruher Straße 31,Karlsruhe,76227,49.0036,8.45782,,0721 94484-0,Karlsruhe
+Verkehrsdienst Pforzheim - Verkehrsgruppe Bundesautobahn,Karlsruher Straße 54,Pforzheim,75179,48.90721,8.65044,,07231 12581-0,Pforzheim
+Verkehrspolizeiinspektion Pforzheim,Kaiser-Friedrich-Straße 154,Pforzheim,75172,48.88823,8.67838,,07231 186-3101,Pforzheim
+Polizeipräsidium Konstanz,Benediktinerplatz 3,Konstanz,78467,47.66898,9.1797,Polizeipräsidium,07531 995-0,Konstanz
+Direktion Polizeireviere Konstanz,Benediktinerplatz 3,Konstanz,78467,47.668872,9.179856,Direktion,07531 995-0,Konstanz
+Polizeirevier Bad Saulgau,Hauptstraße 119,Bad Saulgau,88348,48.01332,9.5034,Polizeirevier,07581 482-0,Ravensburg
+Polizeirevier Friedrichshafen,Ehlersstraße 35,Friedrichshafen,88046,47.659393,9.486471,Polizeirevier,07541 701-0,Konstanz
+Polizeirevier Konstanz,Benediktinerplatz 3,Konstanz,78467,47.66898,9.1797,Polizeirevier,07531 995-0,Konstanz
+Polizeirevier Leutkirch,Karlstraße 8,Leutkirch im Allgäu,88299,47.826385,10.019782,Polizeirevier,07561 8488-0,Ravensburg
+Polizeirevier Radolfzell am Bodensee,Güttinger Straße 1,Radolfzell am Bodensee,78315,47.7396273,8.9740013,Polizeirevier,07732 95066-0,Konstanz
+Polizeirevier Ravensburg,Seestraße 11,Ravensburg,88214,47.778238,9.61208,Polizeirevier,0751 803-3333,Ravensburg
+Polizeirevier Sigmaringen,Karlstraße 15,Sigmaringen,72488,48.08527,9.22126,Polizeirevier,07571 104-0,Ravensburg
+Polizeirevier Singen,Julius-Bührer-Straße 6,Singen (Hohentwiel),78224,47.7589161,8.8428238,Polizeirevier,07731 888-0,Konstanz
+Polizeirevier Stockach,Winterspürer Straße 27,Stockach,78333,47.85142,9.02147,Polizeirevier,07771 9391-0,Konstanz
+Polizeirevier Überlingen,Mühlenstraße 16,Überlingen,88662,47.76441,9.16577,Polizeirevier,07551 804-0,Ravensburg
+Polizeirevier Wangen im Allgäu,Lindauer Straße 38,Wangen im Allgäu,88239,47.684606,9.828214,Polizeirevier,07522 984-0,Ravensburg
+Polizeirevier Weingarten,Promenade 13/1,Weingarten,88250,47.811509,9.637479,Polizeirevier,0751 803-6666 ,Ravensburg
+Kriminalpolizeidirektion Friedrichshafen,Ehlersstraße 15,Friedrichshafen,88046,47.65881,9.48303,Direktion,07541 701-0,Ravensburg
+Kriminaldauerdienst Ravensburg,Rudolfstraße 3,Ravensburg,88214,47.777968,9.613016,,0751 803-4444,Ravensburg
+Kriminaldauerdienst Singen,Julius-Bührer-Straße 6,Singen (Hohentwiel),78224,47.758916,8.842824,,07731 888-0,Konstanz
+Kriminalkommissariat Konstanz,Benediktinerplatz 3,Konstanz,78467,47.668872,9.179856,,07531 995-0,Konstanz
+Kriminalkommissariat Ravensburg,Seestraße 13,Ravensburg,88214,47.778055,9.612182,,0751 803-0,Ravensburg
+Kriminalkommissariat Sigmaringen,Karlstraße 15,Sigmaringen,72488,48.08527,9.22126,,07571 104-0,Ravensburg
+Verkehrspolizeiinspektion Ravensburg,Brielmayerstraße 2,Weingarten,88250,47.800108,9.626084,Direktion,0751 803-5420,Ravensburg
+Verkehrsdienstaußenstelle Kißlegg,Friedrich-List-Straße 14,Kißlegg,88353,47.76914,9.89162,,07563 9099-0,Ravensburg
+Verkehrsdienst Mühlhausen-Ehingen,Im Rohmen  68,Mühlhausen-Ehingen,78259,47.80559,8.82201,,07733 9960-0,Konstanz
+Polizeipräsidium Ludwigsburg,Friedrich-Ebert-Straße 30,Ludwigsburg,71638,48.8933215,9.199877,Polizeipräsidium,07141 18-9,Ludwigsburg
+Direktion Polizeireviere Ludwigsburg,Friedrich-Ebert-Straße 30,Ludwigsburg,71638,48.893195,9.199888,Direktion,07141 18-9,Ludwigsburg
+Polizeirevier Bietigheim-Bissingen,Stuttgarter Straße 57,Bietigheim-Bissingen,74321,48.9528362,9.1371278,Polizeirevier,07142 405-0,Ludwigsburg
+Polizeirevier Böblingen,Talstraße 50,Böblingen,71034,48.68454,9.00173,Polizeirevier,07031 13-2500,Ludwigsburg
+Polizeirevier Ditzingen,An der Lache 1-5,Ditzingen,71254,48.8271283,9.0740374,Polizeirevier,07156 4352-0,Ludwigsburg
+Polizeirevier Herrenberg,Alzentalstraße 1,Herrenberg,71083,48.5940102,8.8660863,Polizeirevier,07032 2708-0,Ludwigsburg
+Polizeirevier Kornwestheim,Stuttgarter Straße 101,Kornwestheim,70806,48.85746,9.18566,Polizeirevier,07154  1313-0,Ludwigsburg
+Polizeirevier Leonberg,Gerhart-Hauptmann-Straße 8,Leonberg,71229,48.7983112,9.0107918,Polizeirevier,07152 605-0,Ludwigsburg
+Polizeirevier Ludwigsburg,Stuttgarter Straße 26-28,Ludwigsburg,71638,48.8928428,9.1942979,Polizeirevier,07141 18-5353,Ludwigsburg
+Polizeirevier Marbach am Neckar,Steinerstraße 2,Marbach am Neckar,71672,48.9392523,9.2573308,Polizeirevier,07144 900-0,Ludwigsburg
+Polizeirevier Sindelfingen,Gartenstraße 4,Sindelfingen,71063,48.7069732,9.0039904,Polizeirevier,07031 697-0,Ludwigsburg
+Polizeirevier Vaihingen an der Enz,Heilbronner Straße 17,Vaihingen an der Enz,71665,48.9337714,8.9583672,Polizeirevier,07042 941-0,Ludwigsburg
+Kriminalpolizeidirektion Böblingen,Talstraße 50,Böblingen,71034,48.68454,9.00173,Direktion,07031 13-00,Ludwigsburg
+Kriminalkommissariat Ludwigsburg,Friedrich-Ebert-Straße 30,Ludwigsburg,71638,48.893195,9.199888,,07141 18-9,Ludwigsburg
+Verkehrspolizeiinspektion Ludwigsburg,Pfaffenwaldring 1,Stuttgart,70569,48.74808,9.10881,Direktion,0711 6869-230,Ludwigsburg
+Polizeipräsidium Mannheim,L6 1,Mannheim,68161,49.48323,8.46712,Polizeipräsidium,0621 174-0,Mannheim
+Polizeirevier Eberbach,Kellereistraße 33,Eberbach,69412,49.46272,8.98406,Polizeirevier,06271 9210-0,Mannheim
+Polizeirevier Heidelberg-Mitte,Rohrbacher Straße 11,Heidelberg,69115,49.4065157,8.6930257,Polizeirevier,06221 1857-0,Mannheim
+Polizeirevier Heidelberg-Nord,Furtwänglerstraße 11,Heidelberg,69121,49.42126,8.68019,Polizeirevier,06221 4569-0,Mannheim
+Polizeirevier Heidelberg-Süd,Bürgerstraße 47,Heidelberg,69124,49.3789878,8.6764057,Polizeirevier,06221 3418-0,Mannheim
+Polizeirevier Hockenheim,Werderstraße 8-10,Hockenheim,68766,49.3181265,8.5407761,Polizeirevier,06205 2860-0,Mannheim
+Polizeirevier Ladenburg,Bahnhofstraße 20-22,Ladenburg,68526,49.471731,8.603919,Polizeirevier,06203 9305-0,Mannheim
+Polizeirevier Mannheim-Innenstadt,H4 1,Mannheim,68159,49.4910013,8.4656997,Polizeirevier,0621 1258-0,Mannheim
+Polizeirevier Mannheim-Käfertal,Ladenburger Straße 3,Mannheim,68309,49.5124314,8.5182761,Polizeirevier,0621 71849-0,Mannheim
+Polizeirevier Mannheim-Neckarau,Reingoldplatz 4,Mannheim,68199,49.45437,8.48306,Polizeirevier,0621 83397-0,Mannheim
+Polizeirevier Mannheim-Neckarstadt,Waldhofstraße 32-34,Mannheim,68169,49.4995783,8.4718308,Polizeirevier,0621 3301-0,Mannheim
+Polizeirevier Mannheim-Oststadt,L6 1,Mannheim,68161,49.48323,8.46712,Polizeirevier,0621 174-3310,Mannheim
+Polizeirevier Mannheim-Sandhofen,Sonnenstraße 37c/d,Mannheim,68307,49.5461914,8.4481622,Polizeirevier,0621 77769-0,Mannheim
+Polizeirevier Neckargemünd,Bahnhofstraße 39,Neckargemünd,69151,49.39309,8.78452,Polizeirevier,06223 9254-0,Mannheim
+Polizeirevier Schwetzingen,Carl-Theodor-Straße 8,Schwetzingen,68723,49.3845385,8.5756366,Polizeirevier,06202 288-0,Mannheim
+Polizeirevier Sinsheim,Wilhelmstraße 7,Sinsheim,74889,49.25386,8.87891,Polizeirevier,07261 690-0,Mannheim
+Polizeirevier Weinheim,Am Hauptbahnhof 4,Weinheim,69469,49.55348,8.66625,Polizeirevier,06201 1003-0,Mannheim
+Polizeirevier Wiesloch,Schloßstraße 11-13,Wiesloch,69168,49.29544,8.6969613,Polizeirevier,06222 5709-0,Mannheim
+Kriminalpolizeidirektion Heidelberg,Römerstraße 168,Heidelberg,69126,49.385242,8.685618,Direktion,0621 174-0,Mannheim
+Kriminaldauerdienst Heidelberg,Römerstraße 168,Heidelberg,69126,49.385242,8.685618,,0621 174-0,Mannheim
+Kriminalkommissariat Mannheim,L6 1,Mannheim,68161,49.48323,8.46712,,0621 174-0,Mannheim
+Verkehrspolizeiinspektion Mannheim,L6 1,Mannheim,68161,49.48323,8.46712,,0621 174-0,Mannheim
+Verkehrsdienst Mannheim - Verkehrsgruppe Bundesautobahn,Am Dünenrand 52,Mannheim,68239,49.451818,8.568731,,0621 47093-0,Mannheim
+Verkehrsdienst Heidelberg - Verkehrsgruppe Heidelberg,Römerstraße 168,Heidelberg,69126,49.385242,8.6856177,,0621 174-0,Mannheim
+Verkehrsdienst Heidelberg - Außenstelle Walldorf,Josef-Reiert-Straße 1a,Walldorf,69190,49.30286,8.62852,,06227 35826-0,Mannheim
+Polizeipräsidium Offenburg,Prinz-Eugen-Straße 78,Offenburg,77654,48.47991,7.95363,Polizeipräsidium,0781 21-0,Offenburg
+Direktion Polizeireviere Offenburg,Prinz-Eugen-Straße 78,Offenburg,77654,48.479853,7.953646,Direktion,0781 21-0,Offenburg
+Polizeirevier Achern/Oberkirch,Hauptstraße 105,Achern,77855,48.628941,8.079465,Polizeirevier,07841 7066-0,Offenburg
+Polizeirevier Baden-Baden,Gutenbergstraße 15,Baden-Baden,76532,48.77683,8.21775,Polizeirevier,07221 680-0,Offenburg
+Polizeirevier Bühl,Hauptstraße 91,Bühl,77815,48.6983699,8.1376917,Polizeirevier,07223 99097-0,Offenburg
+Polizeirevier Gaggenau,Unimogstraße 7,Gaggenau,76571,48.80173,8.3125,Polizeirevier,07225 9887-0,Offenburg
+Polizeirevier Haslach i. K.,Schwarzwaldstraße 16,Haslach im Kinzigtal,77716,48.2794373,8.0882884,Polizeirevier,07832 97592-0,Offenburg
+Polizeirevier Kehl,Rathausplatz 4,Kehl,77694,48.538248,7.920639,Polizeirevier,07851 893-0,Offenburg
+Polizeirevier Lahr,Friedrichstraße 17,Lahr/Schwarzwald,77933,48.3416497,7.8747662,Polizeirevier,07821 277-0,Offenburg
+Polizeirevier Offenburg,Hauptstraße 96,Offenburg,77652,48.46886,7.94252,Polizeirevier,0781 21-2200,Offenburg
+Polizeirevier Rastatt,Engelstraße 31,Rastatt,76437,48.86078,8.20282,Polizeirevier,07222 761-0,Offenburg
+Kriminalpolizeidirektion Offenburg,Prinz-Eugen-Straße 78,Offenburg,77654,48.47991,7.95363,Direktion,0781 21-0,Offenburg
+Kriminaldauerdienst Offenburg,Hauptstraße 96,Offenburg,77652,48.468912,7.9426025,,0781 21-0,Offenburg
+Verkehrspolizeiinspektion Baden-Baden,Schwarzwaldstraße 99,Baden-Baden,76532,48.78083,8.20151,Direktion,07221 680-460,Offenburg
+Verkehrsdienst Offenburg,Am Flugplatz 2,Offenburg,77656,48.4537016,7.9228981,,0781 21-4200,Offenburg
+Polizeipräsidium Reutlingen,Bismarckstraße 60,Reutlingen,72764,48.492355,9.220761,Polizeipräsidium,07121 942-0,Reutlingen
+Polizeirevier Esslingen,Agnespromenade 4,Esslingen am Neckar,73728,48.743119,9.304437,Polizeirevier,0711 3990-0,Reutlingen
+Polizeirevier Filderstadt,Karl-Benz-Straße 23,Filderstadt,70794,48.675288,9.196178,Polizeirevier,0711 7091-3,Reutlingen
+Polizeirevier Flughafen Stuttgart,Flughafenstraße 36,Stuttgart,70629,48.6911183,9.1893812,Polizeirevier,0711 78780-0,Reutlingen
+Polizeirevier Kirchheim unter Teck,Dettinger Straße 101,Kirchheim unter Teck,73230,48.63936,9.45455,Polizeirevier,07021 501-0,Reutlingen
+Polizeirevier Metzingen,Ulmer Straße 96,Metzingen,72555,48.53479,9.29091,Polizeirevier,07123/924 - 0,Reutlingen
+Polizeirevier Münsingen,Karlstraße 2,Münsingen,72525,48.4113143,9.4916674,Polizeirevier,07381/9364 - 0,Reutlingen
+Polizeirevier Nürtingen,Europastraße 34,Nürtingen,72622,48.62911,9.33628,Polizeirevier,07022 9224-0,Reutlingen
+Polizeirevier Pfullingen,Burgstraße 26,Pfullingen,72793,48.4710361,9.2297361,Polizeirevier,07121/9918 - 0,Reutlingen
+Polizeirevier Reutlingen,Burgstraße 27 - 29,Reutlingen,72764,48.49069,9.22134,Polizeirevier,07121 942-3333,Reutlingen
+Polizeirevier Rottenburg,Königstraße 9,Rottenburg am Neckar,72108,48.4779814,8.9347265,Polizeirevier,07472 9801-0,Reutlingen
+Polizeirevier Tübingen,Konrad-Adenauer-Straße 30,Tübingen,72072,48.5096732,9.0489565,Polizeirevier,07071 972-1400,Reutlingen
+Kriminalpolizeidirektion Esslingen,Agnespromenade 4,Esslingen am Neckar,73728,48.743119,9.304437,Direktion,0711 3990-0,Esslingen
+Kriminaldauerdienst Reutlingen,Kaiserstraße 101-103,Reutlingen,72764,48.4907,9.220699,,07121 942-0,Reutlingen
+Kriminalkommissariat Reutlingen,Kaiserstraße 103,Reutlingen,72764,48.4905902,9.2209066,,07121 942-0,Reutlingen
+Kriminalkommissariat Tübingen,Konrad-Adenauer-Straße 30,Tübingen,72072,48.510008,9.048763,,07071 972-4004,Reutlingen
+Verkehrsdienst Tübingen,Konrad-Adenauer-Straße 30,Tübingen,72072,48.5096732,9.0489565,Direktion,07071 972-8503,Reutlingen
+Verkehrsdienst Esslingen,Agnespromenade 4,Esslingen am Neckar,73728,48.743119,9.304437,,0711 3990-0,Esslingen
+Polizeipräsidium Stuttgart,Hahnemannstraße 1,Stuttgart,70191,48.81046,9.18686,Polizeipräsidium,0711 8990-0,Stuttgart
+Polizeirevier 1 Theodor-Heuss-Straße,Theodor-Heuss-Straße 11,Stuttgart,70174,48.7769268,9.1744498,Polizeirevier,0711 8990-3100,Stuttgart
+Polizeirevier 2 Wolframstraße,Wolframstraße 36,Stuttgart,70191,48.7922325,9.1830113,Polizeirevier,0711 8990-3200,Stuttgart
+Polizeirevier 3 Gutenbergstraße,Gutenbergstraße 109/111,Stuttgart,70197,48.7700658,9.1539327,Polizeirevier,0711 8990-3300,Stuttgart
+Polizeirevier 4 Balinger Straße,Balinger Straße 31,Stuttgart,70567,48.72991,9.14272,Polizeirevier,0711 8990-3400,Stuttgart
+Polizeirevier 5 Ostendstraße,Ostendstraße 88,Stuttgart,70188,48.7837341,9.2079634,Polizeirevier,0711 8990-3500,Stuttgart
+Polizeirevier 6 Martin-Luther Straße,Martin-Luther-Straße  40/42,Stuttgart,70372,48.80509,9.22409,Polizeirevier,0711 8990-3600,Stuttgart
+Polizeirevier 7 Ludwigsburger Straße,Ludwigsburger Straße 126,Stuttgart,70435,48.8317597,9.1746453,Polizeirevier,0711 8990-3700,Stuttgart
+Polizeirevier 8 Kärntner Straße,Kärntner Straße 18,Stuttgart,70469,48.8131253,9.16063,Polizeirevier,0711 8990-3800,Stuttgart
+Kriminaldauerdienst Stuttgart,Christophstraße 7,Stuttgart,70178,48.77215,9.17549,,0711 8990-5777,Stuttgart
+Polizeirevier Albstadt,Rudolf-Diesel-Straße 3,Albstadt,72461,48.23104,9.02733,Polizeirevier,07432 955-0,Reutlingen
+Polizeirevier Balingen,Johann-Sebastian-Bach-Straße 2,Balingen,72336,48.275667,8.857329,Polizeirevier,07433 264-0,Reutlingen
+Polizeirevier Donaueschingen,Lehenstraße 2,Donaueschingen,78166,47.95346,8.49631,Polizeirevier,0771 83783-0,Konstanz
+Polizeirevier Freudenstadt,Marktplatz 47,Freudenstadt,72250,48.464357,8.409372,Polizeirevier,07441 536-310,Pforzheim
+Polizeirevier Hechingen,Heiligkreuzstraße 6,Hechingen,72379,48.34886,8.96347,Polizeirevier,07471 9880-0,Reutlingen
+Polizeirevier Horb am Neckar,Neckarstraße 33,Horb am Neckar,72160,48.44422,8.690874,Polizeirevier,07451 96-0,Pforzheim
+Polizeirevier Oberndorf am Neckar,Klosterstraße 3,Oberndorf am Neckar,78727,48.292067,8.574928,Polizeirevier,07423 8101-0,Konstanz
+Polizeirevier Rottweil,Kaiserstraße 10,Rottweil,78628,48.16405,8.62602,Polizeirevier,0741 477-0,Konstanz
+Polizeirevier Sankt Georgen im Schwarzwald,Talstraße 25,Sankt Georgen im Schwarzwald,78112,48.128366,8.337171,Polizeirevier,07724 9495-00,Freiburg
+Polizeirevier Schramberg,Bahnhofstraße 5,Schramberg,78713,48.229114,8.384202,Polizeirevier,07422 2701-0,Konstanz
+Polizeirevier Schwenningen,Oberdorfstraße 54,Villingen-Schwenningen,78054,48.06277,8.52662,Polizeirevier,07720 8500-0,Konstanz
+Polizeirevier Spaichingen,Hauptstraße 79,Spaichingen,78549,48.07203,8.74116,Polizeirevier,07424 9318-0,Konstanz
+Polizeirevier Tuttlingen,Stockacher Straße 158,Tuttlingen,78532,47.97348,8.82836,Polizeirevier,07461 941-0,Konstanz
+Polizeirevier Villingen,Waldstraße 10/1,Villingen-Schwenningen,78048,48.06477,8.45252,Polizeirevier,07721 601-0,Konstanz
+Kriminalpolizeidirektion Rottweil,Kaiserstraße 10,Rottweil,78628,48.16405,8.62602,Direktion,0741 477-0,Konstanz
+Kriminalinspektion 7 Kriminaldauerdienst,Julius-Bührer-Straße 6,Singen,78224,47.7569852,8.8387607,,07731 888-0,Konstanz
+Kriminalkommissariat Balingen,Hirschbergstraße 1,Balingen,72336,48.275204,8.854949,,07433 264-0,Reutlingen
+Kriminalkommissariat Freudenstadt,Marktplatz 47,Freudenstadt,72250,48.464241,8.409477,,07441 536-401,Pforzheim
+Kriminalkommissariat Tuttlingen,Stockacher Straße 158,Tuttlingen,78532,47.97348,8.82836,,07461 941-0,Konstanz
+Kriminalkommissariat Villingen-Schwenningen,Waldstraße 10/1,Villingen-Schwenningen,78048,48.06477,8.45252,,07721 601-0,Konstanz
+Verkehrsdienst Zimmern ob Rottweil,Steinhäuslebühl 18,Zimmern ob Rottweil,78658,48.17286,8.57656,Direktion,0741 34879-0,Konstanz
+Polizeipräsidium Ulm,Münsterplatz 47,Ulm,89073,48.397614,9.9916439,Polizeipräsidium,0731 188-0,Ulm
+Schutzpolizeidirektion Polizeireviere Ulm,Münsterplatz 47,Ulm,89073,48.397504,9.989768,Direktion,0731 188-0,Ulm
+Polizeirevier Biberach,Erlenweg 2,Biberach an der Riß,88400,48.08738,9.79488,Polizeirevier,07351 447-0,Ulm
+Polizeirevier Ehingen,Panoramastraße 6,Ehingen (Donau),89584,48.2780345,9.7251251,Polizeirevier,07391 588-0,Ulm
+Polizeirevier Eislingen,Ulmer Straße 34,Eislingen/Fils,73054,48.6932276,9.710758,Polizeirevier,07161 851-0,Ulm
+Polizeirevier Geislingen an der Steige,Eberhardstraße 12,Geislingen an der Steige,73312,48.61701,9.83882,Polizeirevier,07331 9327-0,Ulm
+Polizeirevier Giengen an der Brenz,Schwagestraße 16,Giengen an der Brenz,89537,48.6231803,10.2387663,Polizeirevier,07322 9653-0,Ulm
+Polizeirevier Göppingen,Pfarrstraße 29,Göppingen,73033,48.7050512,9.6508052,Polizeirevier,07161 63-2360,Ulm
+Polizeirevier Laupheim,Biberacher Straße 22,Laupheim,88471,48.2252411,9.8772729,Polizeirevier,07392 9630-0,Ulm
+Polizeirevier Riedlingen,Zwiefalter Straße 16,Riedlingen,88499,48.1557,9.47819,Polizeirevier,07371 938-0,Ulm
+Polizeirevier Uhingen,Im Brühl 5,Uhingen,73066,48.70664,9.57459,Polizeirevier,07161 9381-0,Ulm
+Polizeirevier Ulm-Mitte,Münsterplatz 47,Ulm,89073,48.397614,9.9916439,Polizeirevier,0731 188-0,Ulm
+Polizeirevier Ulm-West,Römerstraße 122,Ulm,89077,48.3860517,9.9669864,Polizeirevier,07 31 188-0,Ulm
+Kriminalpolizeidirektion Ulm,Münsterplatz 47,Ulm,89073,48.397614,9.9916439,Direktion,0731 188-0,Ulm
+Kriminaldauerdienst Ulm,Münsterplatz 47,Ulm,89073,48.397504,9.989768,,0731 188-0,Ulm
+Kriminalkommissariat Biberach,Erlenweg 2,Biberach an der Riß,88400,48.08738,9.79488,,07351 447-0,Ulm
+Kriminalkommissariat Göppingen,Schillerstraße 15,Göppingen,73033,48.70556,9.65083,,07161 63-0,Ulm
+Kriminalkommissariat Heidenheim,Kurt-Bittel-Straße 12,Heidenheim an der Brenz,89518,48.6808667,10.1535367,,07321 322-0,Ulm
+Verkehrspolizeiinspektion Heidenheim,Am Eisweiher 6,Heidenheim an der Brenz,89522,48.66881,10.22851,Direktion,07321 9752-0,Ulm
+Verkehrsdienst Laupheim,Biberacher Straße 22,Laupheim,88471,48.225241,9.877273,,07392 9630-0,Ulm
+Verkehrsdienst Mühlhausen im Täle,Warmenweg 2,Mühlhausen im Täle,73347,48.58201,9.6567,,07335 9626-0,Ulm
+"Präsidium Technik, Logistik, Service der Polizei",Nauheimer Straße 101,Stuttgart,70372,48.801573,9.224423,,0711 2302 -0,PTLS
+Schutzpolizeidirektion - Gewerbe / Umwelt ,Rehlingstr. 6 d,Freiburg im Breisgau,79100,47.989373,7.840472,,0761 21689-0,Freiburg
+Schutzpolizeidirektion - Gewerbe / Umwelt,L 6 1,Mannheim,68161,49.486166,8.470262,,0621 174-0,Mannheim
+Kriminalinspektion 2 Haus des Jugendrechts,Heinrich-Lanz-Straße 38 ,Mannheim,68165,49.480392,8.475271,,0621 174-5865,Mannheim
+Verkehrspolizeiinspektion Stuttgart,Löwentorbogen 9a,Stuttgart,70376,48.8083837,9.192798,,0711 8990-4100,Stuttgart
+Polizeipräsidium Pforzheim,Bahnhofstr. 13,Pforzheim,75172,48.893076,8.7007708,Polizeipräsidium,+49 (0) 7231 / 186-0,Pforzheim
+Polizeipräsidium Ravensburg,Gartenstraße 97,Ravensburg,88212,47.7928276,9.622915,Polizeipräsidium,+49 (0) 751 / 803-0,Ravensburg
+Kriminaldauerdienst Pforzheim,Ostendstraße 3,Pforzheim,75175,48.893638,8.715857,,07231 186-4444,Pforzheim
+Verkehrspolizeiinspektion Konstanz,Steinhäuslebühl 18,Zimmern o. R.,78658,48.1728444,8.5765284,,0741 34879-0,Konstanz
+Schutzpolizeidirektion - Polizeireviere Mannheim,L 6 1,Mannheim,68161,49.48323,8.46712,,0621 174-0,Mannheim
+Schutzpolizeidirektion - Polizeireviere Pforzheim,Bahnhofstraße 13,Pforzheim,75172,48.893076,8.700771,,07231 186-0,Pforzheim
+Schutzpolizeidirektion - Polizeireviere Reutlingen,Bismarckstraße 60,Reutlingen,72764,48.491929,9.22098,,07121 942-0,Reutlingen
+Schutzpolizeidirektion - Polizeireviere Ravensburg,Gartenstraße 97,Ravensburg,88212,47.7928276,9.622915,,0751 803-0,Ravensburg
+Schutzpolizeidirektion - Polizeireviere Stuttgart,Hahnemannstraße 1,Stuttgart,70191,48.8101373,9.1860013,,0711 8990-3005,Stuttgart
+Kriminalpolizeidirektion Stuttgart,Hahnemannstraße 1,Stuttgart,70191,48.8101373,9.1860013,,0711 8990-5005,Stuttgart
+Verkehrspolizeiinspektion Tübingen,Konrad-Adenauer-Straße 30,Tübingen,72072,48.509673,9.048956,,07071 972-8503,Reutlingen
+Verkehrsdienst Baden-Baden,Schwarzwaldstraße 99,Baden-Baden,76532,48.78077,8.2015787,,07221 680-460,Offenburg
+Verkehrsdienstaußenstelle Bühl,Fridolin-Stiegler-Str. 3,Bühl,77851,48.70338,8.12608,,07223 80847-0,Offenburg
+Gewerbe und Umwelt Heilbronn,John-F.-Kennedy-Straße 14,Heilbronn,74074,49.1234873,9.2215221,,07131 7479 0,Heilbronn
+Polizeihundeführerstaffel Offenau,Wehräcker 3,Offenau,74254,49.2352052,9.1757651,,07136 96391-0,Heilbronn
+Verkehrsdienst Außenstelle Künzelsau,Schillerstraße 7-11,Künzelsau,74653,49.278905,9.683062,,07940 940-600,Aalen
+Verkehrsdienst Außenstelle Mosbach,Odenwaldstraße 22,Mosbach,74821,49.3558434,9.1472823,,06261 809-100,Heilbronn
+Polizeirevier Heidenheim,Schnaitheimer Str. 14,Heidenheim an der Brenz,89520,48.680362,10.15231,,07321 322-0,Ulm
+Polizeihundeführerstaffel Karlsruhe,Am Heegwald 25,Karlsruhe,76227,49.0142214,8.4753556,,0721 663398-0,Karlsruhe

@@ -5,6 +5,7 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "biome lint --max-diagnostics 0",
+    "lint:fix": "biome lint --max-diagnostics 0 --write",
     "format": "biome format --write",
     "check-types": "turbo run check-types",
     "router:generate": "tanstack-router-cli generate",

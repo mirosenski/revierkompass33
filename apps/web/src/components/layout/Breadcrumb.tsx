@@ -1,5 +1,4 @@
-import { useLocation } from '@tanstack/react-router'
-import { Link } from '@tanstack/react-router'
+import { Link, useLocation } from "@tanstack/react-router";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -7,63 +6,61 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from '@/components/ui/breadcrumb'
+} from "@/components/ui/breadcrumb";
 
 export function BreadcrumbNav() {
-  const location = useLocation()
-  const pathSegments = location.pathname.split('/').filter(Boolean)
-  
+  const location = useLocation();
+  const pathSegments = location.pathname.split("/").filter(Boolean);
+
   // Wenn wir auf der Home-Seite sind, zeige keinen Breadcrumb
-  if (pathSegments.length === 0) return null
+  if (pathSegments.length === 0) return null;
 
   // Breadcrumb-Titel für verschiedene Routen
-  const getBreadcrumbTitle = (segment: string, index: number) => {
+  const getBreadcrumbTitle = (segment: string, _index: number) => {
     switch (segment) {
-      case 'wizard':
-        return 'Wizard'
-      case 'step1':
-        return 'Schritt 1'
-      case 'step2':
-        return 'Schritt 2'
-      case 'step3':
-        return 'Schritt 3'
-      case 'about':
-        return 'Über uns'
-      case 'login':
-        return 'Login'
+      case "wizard":
+        return "Wizard";
+      case "step1":
+        return "Schritt 1";
+      case "step2":
+        return "Schritt 2";
+      case "step3":
+        return "Schritt 3";
+      case "about":
+        return "Über uns";
+      case "login":
+        return "Login";
       default:
-        return segment.charAt(0).toUpperCase() + segment.slice(1)
+        return segment.charAt(0).toUpperCase() + segment.slice(1);
     }
-  }
+  };
 
   // Erstelle Breadcrumb-Items
-  const breadcrumbItems = []
-  let currentPath = ''
+  const breadcrumbItems = [];
+  let currentPath = "";
 
   for (let i = 0; i < pathSegments.length; i++) {
-    const segment = pathSegments[i]
-    currentPath += `/${segment}`
-    
-    const isLast = i === pathSegments.length - 1
-    const title = getBreadcrumbTitle(segment, i)
+    const segment = pathSegments[i];
+    currentPath += `/${segment}`;
+
+    const isLast = i === pathSegments.length - 1;
+    const title = getBreadcrumbTitle(segment, i);
 
     if (isLast) {
       breadcrumbItems.push(
         <BreadcrumbItem key={currentPath}>
           <BreadcrumbPage>{title}</BreadcrumbPage>
-        </BreadcrumbItem>
-      )
+        </BreadcrumbItem>,
+      );
     } else {
       breadcrumbItems.push(
         <BreadcrumbItem key={currentPath}>
           <BreadcrumbLink asChild>
             <Link to={currentPath}>{title}</Link>
           </BreadcrumbLink>
-        </BreadcrumbItem>
-      )
-      breadcrumbItems.push(
-        <BreadcrumbSeparator key={`separator-${currentPath}`} />
-      )
+        </BreadcrumbItem>,
+      );
+      breadcrumbItems.push(<BreadcrumbSeparator key={`separator-${currentPath}`} />);
     }
   }
 
@@ -83,5 +80,5 @@ export function BreadcrumbNav() {
         </Breadcrumb>
       </div>
     </nav>
-  )
-} 
+  );
+}
