@@ -153,11 +153,11 @@ export function ModeToggle() {
         <Button 
           variant="outline" 
           size="icon"
-          className={`theme-toggle-button transition-all duration-300 
+          className={`theme-toggle-button transition-all duration-300
             ${hover ? 'shadow-lg shadow-blue-500/20' : 'shadow-md'}
-            hover:shadow-blue-500/30 border-gray-300 dark:border-gray-600
-            bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300
-            hover:bg-gray-50 dark:hover:bg-gray-700`}
+            hover:shadow-blue-500/30 border-input
+            bg-background text-foreground
+            hover:bg-accent`}
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
         >
@@ -167,41 +167,41 @@ export function ModeToggle() {
       </DropdownMenuTrigger>
       <DropdownMenuContent 
         align="end" 
-        className="w-48 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg rounded-lg p-1"
+        className="w-48 bg-popover border border-border shadow-lg rounded-lg p-1"
       >
         <DropdownMenuItem 
           onClick={() => setTheme("light")}
-          className="flex items-center px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded cursor-pointer transition-colors"
+          className="flex items-center px-3 py-2 text-sm text-foreground hover:bg-accent rounded cursor-pointer transition-colors"
         >
           <Sun className="mr-3 h-4 w-4" /> Light
         </DropdownMenuItem>
         <DropdownMenuItem 
           onClick={() => setTheme("dark")}
-          className="flex items-center px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded cursor-pointer transition-colors"
+          className="flex items-center px-3 py-2 text-sm text-foreground hover:bg-accent rounded cursor-pointer transition-colors"
         >
           <Moon className="mr-3 h-4 w-4" /> Dark
         </DropdownMenuItem>
         <DropdownMenuItem 
           onClick={() => setTheme("system")}
-          className="flex items-center px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded cursor-pointer transition-colors"
+          className="flex items-center px-3 py-2 text-sm text-foreground hover:bg-accent rounded cursor-pointer transition-colors"
         >
           <Monitor className="mr-3 h-4 w-4" /> System
         </DropdownMenuItem>
         <DropdownMenuItem 
           onClick={() => setTheme("eco")}
-          className="flex items-center px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded cursor-pointer transition-colors"
+          className="flex items-center px-3 py-2 text-sm text-foreground hover:bg-accent rounded cursor-pointer transition-colors"
         >
           <Leaf className="mr-3 h-4 w-4" /> Eco Mode
         </DropdownMenuItem>
         <DropdownMenuItem 
           onClick={() => setTheme("highContrast")}
-          className="flex items-center px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded cursor-pointer transition-colors"
+          className="flex items-center px-3 py-2 text-sm text-foreground hover:bg-accent rounded cursor-pointer transition-colors"
         >
           <Eye className="mr-3 h-4 w-4" /> High Contrast
         </DropdownMenuItem>
-        <DropdownMenuItem 
+        <DropdownMenuItem
           onClick={() => setTheme("auto")}
-          className="flex items-center px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded cursor-pointer transition-colors"
+          className="flex items-center px-3 py-2 text-sm text-foreground hover:bg-accent rounded cursor-pointer transition-colors"
         >
           <Zap className="mr-3 h-4 w-4" /> Auto (AI)
         </DropdownMenuItem>

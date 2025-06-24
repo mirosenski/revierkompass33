@@ -13,15 +13,15 @@ export function HeroSection() {
             in Baden-Württemberg
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <Link
               to="/wizard/step1"
-              className="bg-white dark:bg-gray-100 text-blue-600 dark:text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-50 dark:hover:bg-gray-200 transition-colors"
+              className="bg-background text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-accent transition-colors"
             >
               Jetzt Route planen
             </Link>
-            <Link 
+            <Link
               to="/about"
-              className="border-2 border-white dark:border-gray-100 text-white dark:text-gray-100 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white dark:hover:bg-gray-100 hover:text-blue-600 dark:hover:text-blue-800 transition-colors"
+              className="border-2 border-foreground text-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-background hover:text-primary transition-colors"
             >
               Mehr erfahren
             </Link>
