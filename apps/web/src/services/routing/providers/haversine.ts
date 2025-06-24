@@ -22,7 +22,9 @@ export async function getHaversineFallback(origin: LatLng, dest: LatLng): Promis
         [origin.lng, origin.lat],
         [dest.lng, dest.lat]
       ]
-    }
+    },
+    provider: 'haversine' as const,
+    confidence: 0.5
   };
 }
 

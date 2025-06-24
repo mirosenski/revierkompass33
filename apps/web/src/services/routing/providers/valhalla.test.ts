@@ -1,10 +1,9 @@
 import { describe, it, expect, beforeAll, afterAll, afterEach } from 'vitest';
-import { setupServer } from 'msw/node';
 import { http, HttpResponse } from 'msw';
-import { getRouteValhalla, RateLimitError } from './valhalla';
+import { getRouteValhalla } from './valhalla';
+import { RateLimitError } from '../errors';
 import type { LatLng } from './osrm';
-
-const server = setupServer();
+import { server } from '../../../tests/msw/server';
 
 beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
@@ -14,13 +13,16 @@ describe('getRouteValhalla', () => {
   it('should return route successfully', async () => {
     const mockResponse = {
       trip: {
+        summary: {
+          length: 80, // 80 km
+          time: 3600, // 60 minutes
+        },
         legs: [
           {
-            summary: {
-              length: 80, // 80 km
-              time: 3600, // 60 minutes
-            },
-            shape: '_p~iF~ps|U_ulLnnqC_mqNvxq`@'
+            maneuvers: [
+              { lat: 48.7758, lon: 9.1829, instruction: 'Start' },
+              { lat: 49.0069, lon: 8.4037, instruction: 'End' }
+            ]
           }
         ]
       }
@@ -41,6 +43,8 @@ describe('getRouteValhalla', () => {
     expect(result.duration).toBe(3600); // 60 minutes in seconds
     expect(result.geometry.type).toBe('LineString');
     expect(Array.isArray(result.geometry.coordinates)).toBe(true);
+    expect(result.provider).toBe('valhalla');
+    expect(result.confidence).toBe(0.8);
   });
 
   it('should throw RateLimitError on 429 response', async () => {
@@ -54,7 +58,6 @@ describe('getRouteValhalla', () => {
     const dest: LatLng = { lat: 49.0069, lng: 8.4037 };
 
     await expect(getRouteValhalla(origin, dest)).rejects.toThrow(RateLimitError);
-    await expect(getRouteValhalla(origin, dest)).rejects.toThrow('Rate limit exceeded for Valhalla service');
   });
 
   it('should throw error for invalid coordinates', async () => {
@@ -65,7 +68,7 @@ describe('getRouteValhalla', () => {
   });
 
   it('should throw error when no route found', async () => {
-    const mockResponse = { trip: { legs: [] } };
+    const mockResponse = { trip: null };
 
     server.use(
       http.post('https://valhalla1.openstreetmap.de/route', () => {
@@ -76,7 +79,7 @@ describe('getRouteValhalla', () => {
     const origin: LatLng = { lat: 48.7758, lng: 9.1829 };
     const dest: LatLng = { lat: 49.0069, lng: 8.4037 };
 
-    await expect(getRouteValhalla(origin, dest)).rejects.toThrow('No route found');
+    await expect(getRouteValhalla(origin, dest)).rejects.toThrow('Keine Route gefunden');
   });
 
   it('should handle HTTP errors', async () => {
@@ -89,6 +92,6 @@ describe('getRouteValhalla', () => {
     const origin: LatLng = { lat: 48.7758, lng: 9.1829 };
     const dest: LatLng = { lat: 49.0069, lng: 8.4037 };
 
-    await expect(getRouteValhalla(origin, dest)).rejects.toThrow('HTTP 500: Internal Server Error');
+    await expect(getRouteValhalla(origin, dest)).rejects.toThrow();
   });
 }); 

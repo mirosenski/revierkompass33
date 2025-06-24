@@ -53,10 +53,13 @@ export function BreadcrumbNav() {
         </BreadcrumbItem>,
       );
     } else {
+      // Spezialfall: "Wizard" soll zu /wizard/step1 führen
+      const linkPath = segment === "wizard" ? "/wizard/step1" : currentPath;
+      
       breadcrumbItems.push(
         <BreadcrumbItem key={currentPath}>
           <BreadcrumbLink asChild>
-            <Link to={currentPath}>{title}</Link>
+            <Link to={linkPath}>{title}</Link>
           </BreadcrumbLink>
         </BreadcrumbItem>,
       );

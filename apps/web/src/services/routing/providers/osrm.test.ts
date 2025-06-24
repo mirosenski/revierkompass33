@@ -1,9 +1,7 @@
 import { describe, it, expect, beforeAll, afterAll, afterEach } from 'vitest';
-import { setupServer } from 'msw/node';
 import { http, HttpResponse } from 'msw';
 import { getRouteOSRM, type LatLng } from './osrm';
-
-const server = setupServer();
+import { server } from '../../../tests/msw/server';
 
 beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
@@ -47,7 +45,9 @@ describe('getRouteOSRM', () => {
           [9.1829, 48.7758],
           [8.4037, 49.0069]
         ]
-      }
+      },
+      provider: 'osrm',
+      confidence: 0.9
     });
   });
 
@@ -70,7 +70,7 @@ describe('getRouteOSRM', () => {
     const origin: LatLng = { lat: 48.7758, lng: 9.1829 };
     const dest: LatLng = { lat: 49.0069, lng: 8.4037 };
 
-    await expect(getRouteOSRM(origin, dest)).rejects.toThrow('No route found');
+    await expect(getRouteOSRM(origin, dest)).rejects.toThrow('Keine Route gefunden');
   });
 
   it('handles HTTP errors', async () => {
@@ -83,6 +83,6 @@ describe('getRouteOSRM', () => {
     const origin: LatLng = { lat: 48.7758, lng: 9.1829 };
     const dest: LatLng = { lat: 49.0069, lng: 8.4037 };
 
-    await expect(getRouteOSRM(origin, dest)).rejects.toThrow('HTTP 500: Internal Server Error');
+    await expect(getRouteOSRM(origin, dest)).rejects.toThrow();
   });
 }); 

@@ -1,22 +1,20 @@
 import { typedFetch } from '@/services/http/fetch';
 import { validateCoordinates } from '@/utils/validation';
+import { RateLimitError, CORSError } from '../errors';
 import type { LatLng, RouteResult } from './osrm';
-
-export class RateLimitError extends Error {
-  constructor(message: string) {
-    super(message);
-    this.name = 'RateLimitError';
-  }
-}
 
 interface ValhallaResponse {
   trip: {
+    summary: {
+      length: number; // km
+      time: number; // seconds
+    };
     legs: Array<{
-      summary: {
-        length: number;
-        time: number;
-      };
-      shape: string; // Encoded polyline
+      maneuvers: Array<{
+        lat: number;
+        lon: number;
+        instruction: string;
+      }>;
     }>;
   };
 }
@@ -29,6 +27,7 @@ interface ValhallaRequest {
   costing: string;
   directions_options: {
     units: string;
+    language: string;
   };
 }
 
@@ -38,55 +37,51 @@ export async function getRouteValhalla(origin: LatLng, dest: LatLng): Promise<Ro
     throw new Error('Invalid coordinates provided');
   }
 
+  const url = 'https://valhalla1.openstreetmap.de/route';
+  
   const requestBody: ValhallaRequest = {
     locations: [
       { lat: origin.lat, lon: origin.lng },
       { lat: dest.lat, lon: dest.lng }
     ],
-    costing: 'auto',
+    costing: "auto",
     directions_options: {
-      units: 'kilometers'
+      units: "kilometers",
+      language: "de-DE"
     }
   };
-
+  
   try {
-    const data = await typedFetch<ValhallaResponse>(
-      'https://valhalla1.openstreetmap.de/route',
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(requestBody),
-      }
-    );
-
-    if (!data.trip?.legs || data.trip.legs.length === 0) {
-      throw new Error('No route found');
-    }
-
-    const [leg] = data.trip.legs;
+    const response = await typedFetch<ValhallaResponse>(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(requestBody)
+    });
     
-    // Convert to meters and seconds
-    const distance = leg.summary.length * 1000; // km to m
-    const duration = leg.summary.time; // seconds
-
-    // Decode polyline to coordinates (simplified - in production use a proper polyline decoder)
-    const coordinates = decodePolyline(leg.shape);
-
+    if (!response.trip) {
+      throw new Error('Keine Route gefunden');
+    }
+    
     return {
-      distance,
-      duration,
+      distance: response.trip.summary.length * 1000, // km to m
+      duration: response.trip.summary.time, // seconds
       geometry: {
         type: 'LineString',
-        coordinates,
+        coordinates: response.trip.legs[0].maneuvers.map((m: any) => [m.lon, m.lat])
       },
+      provider: 'valhalla' as const,
+      confidence: 0.8
     };
-  } catch (error: any) {
-    if (error.message?.includes('429')) {
-      throw new RateLimitError('Rate limit exceeded for Valhalla service');
+  } catch (error) {
+    if (error instanceof Error) {
+      if (error.message.includes('429')) {
+        console.warn('Valhalla Rate Limit getroffen - verwende Fallback');
+        throw new RateLimitError('valhalla', 60);
+      }
+      if (error.message.includes('CORS') || error.message.includes('Failed to fetch')) {
+        throw new CORSError('valhalla');
+      }
     }
-    console.error('Valhalla Error:', error);
     throw error;
   }
 }
