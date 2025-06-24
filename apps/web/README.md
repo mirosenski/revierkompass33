@@ -52,3 +52,12 @@ export default tseslint.config({
   },
 })
 ```
+
+## Environment Variables
+
+Create a `.env` file based on `.env.example` to configure API endpoints and monitoring options.
+
+- `VITE_OSRM_ENDPOINT` - URL of the primary OSRM service
+- `VITE_VALHALLA_ENDPOINT` - URL of the primary Valhalla service
+- `VITE_CACHE_SIZE` - maximum number of entries stored in the in-memory cache
+- `VITE_MONITORING_ENABLED` - enable performance monitoring when set to `true`
