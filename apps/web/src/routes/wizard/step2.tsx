@@ -141,8 +141,32 @@ function Step2Component() {
       return;
     }
 
-    console.log("Ausgewählte Stationen:", selectedStations);
-    navigate({ to: "/wizard/step3" });
+    // Filtere die ausgewählten Stationen mit vollständigen Daten
+    const selectedStationData = stationen.filter(station => 
+      selectedStations.includes(station.id)
+    );
+
+    // Validiere, dass alle Stationen Koordinaten haben
+    const stationsWithCoords = selectedStationData.filter(station => 
+      station.latitude && station.longitude
+    );
+
+    if (stationsWithCoords.length === 0) {
+      alert("Keine der ausgewählten Stationen hat gültige Koordinaten!");
+      return;
+    }
+
+    console.log("Ausgewählte Stationen:", selectedStationData);
+    console.log("Stationen mit Koordinaten:", stationsWithCoords);
+
+    // Übertrage Daten via URL Search Params
+    const searchParams = new URLSearchParams();
+    searchParams.set('stations', JSON.stringify(stationsWithCoords));
+    
+    navigate({ 
+      to: "/wizard/step3",
+      search: { stations: JSON.stringify(stationsWithCoords) }
+    });
   };
 
   const gruppiertStationen = groupByTyp(stationen);
